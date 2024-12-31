@@ -5,7 +5,7 @@ const bookSchema = new mongoose.Schema({
   content: { type: String, required: true },
   author: { type: mongoose.Schema.Types.ObjectId, ref: 'Author', required: true }, 
     publishedDate: { type: Date, default: Date.now },
-});
+},{versionKey: false});
 
 const Book = mongoose.model('Book', bookSchema);
 
